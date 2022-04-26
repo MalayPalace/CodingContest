@@ -85,3 +85,122 @@ Input:
 Output:
 5
 ```
+
+### Count Bigger
+
+*(CountBigger.java)*
+
+```
+You will be given an array and a number and you need to count how many numbers are bigger than this number and print this count to the stdout.
+
+Input Format
+You will be taking a number as an input using stdin which tells about the length of the array. On another line, array elements should be there with single space between them. Another line will have the number for which you have to do the comparison.
+
+Constraints
+1 <= L <= 1000
+1 <= Ai <= 1000
+
+Output Format
+Print the count to the stdout.
+
+Sample TestCase 1
+Input:
+5
+10 11 12 44 66
+22
+Output:
+2
+Explanation:
+There are only two numbers which are greater than 22 that are 44 and 66.
+```
+
+### Linear Search
+
+*(LinearSearch.java)*
+
+```
+Given an array of numbers of size n and integer x. Search whether x is present in array or not. If yes, return true else return false. You need to perform linear search on the given array. 
+
+Input Format
+You will be given an array of integers of size N and integer X.
+
+Constraints
+1 < N < 10^5
+1 < A[i] <10^5
+1 < X < 10^5
+
+Output Format
+You need to return boolean value from the given function. 
+
+Sample TestCase 1
+Input
+5
+0
+23
+14
+12
+9
+12
+Output
+1
+```
+
+### Binary Search
+
+*(BinarySearchRecursive.java)*
+
+```
+Given an array of numbers of size n and integer x. Search whether x is present in array or not. If yes, return true else return false. You need to perform binary search on the given array. 
+
+Input Format
+You will be given an array of Integers and An Integer X.
+
+Constraints
+1 < N < 10^5
+1 < A[i] < 10^5
+1 < X < 10^5
+
+Output Format
+You need to Print 'Yes' if the X is present in the array and 'No' otherwise.
+
+Sample TestCase 1
+Input
+5
+1
+12
+22
+32
+42
+12
+Output
+Yes
+```
+
+### Occurrence of M
+
+*(OccuranceSearch.java)*
+
+```
+Rohan is given an array of N integers and an integer M. Rohan has to tell the number of times M is present in array. Rohan has to go to play an important match. Can you complete the task for him.
+
+Input Format
+The first line of input consist of number of test case, T
+The first line of each test case consists of two space separated integers, N and M.
+The second line of each test case consists of N space separated integers.
+
+Constraints
+1<= T <=10
+1<= N <=100
+1<= M <=1000
+
+Output Format
+For each test case, Print the number of times M is present in array
+
+Sample TestCase 1
+Input
+1
+5 25
+10 25 25 25 35
+Output
+3
+```
