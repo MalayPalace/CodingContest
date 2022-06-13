@@ -9,9 +9,13 @@ package com.contest.techgig.y2022;
 
 import java.util.Scanner;
 
+import com.malay.util.ExecutionCalc;
+
 public class ChantuBantu {
 
 	public static void main(String[] args) {
+
+		ExecutionCalc.start();
 		Scanner s = new Scanner(System.in);
 		int noOfTest = s.nextInt();
 		s.nextLine();
@@ -24,65 +28,117 @@ public class ChantuBantu {
 			s.nextLine();
 			String giftPriceStr = s.nextLine();
 
-			// Initializing arrays
-			int[] lowestPriceGift = new int[giftReq];
-
-			lowestPriceGift = getNLowestGifts(giftPriceStr, giftAvailable, giftReq);
-
-			// Add the lowest price value
-			long amount = 0;
-			for (int j = 0; j < giftReq; j++) {
-				amount = amount + lowestPriceGift[j];
-			}
-			System.out.println(amount);
+			ChantuBantu ob = new ChantuBantu();
+			System.out.println(ob.getNLowestGiftsSum(giftPriceStr, giftAvailable, giftReq));
 
 		}
 		s.close();
+		ExecutionCalc.endAndPrint();
 	}
 
-	private static int[] getNLowestGifts(String giftPriceStr, int giftAvailable, int giftReq) {
-		int[] result = new int[giftReq];
-
-		// Filling with max value
-		for (int i = 0; i < giftReq; i++) {
-			result[i] = Integer.MAX_VALUE;
-		}
-
+	private long getNLowestGiftsSum(String giftPriceStr, int giftAvailable, int giftReq) {
 		String[] gifts = giftPriceStr.split(" ");
+		SmallestArray arr = new SmallestArray(giftReq);
+
 		for (int i = 0; i < giftAvailable; i++) {
 			int giftAmount = Integer.parseInt(gifts[i]);
 
-			// Getting insertion index to add in lowest price
-			int index = 0;
-			for (; index < giftReq; index++) {
-				if (giftAmount > result[index]) {
-					break;
-				}
+			arr.addToArray(giftAmount);
+		}
+		return arr.getSum();
+	}
+
+	class SmallestArray {
+
+		Node start;
+		int capacity;
+		int size = 0;
+
+		public SmallestArray(int capacity) {
+			this.capacity = capacity;
+		}
+
+		public void addToArray(int value) {
+			if (size == 0) {
+				// For entering the first element
+				this.start = new Node(value);
+				size++;
+			} else {
+				Node iter = start;
+				Node previous = start;
+				boolean endFlag = true;
+
+				do {
+					if (value > iter.getValue() || iter.getNext() == null) {
+						// Found the insertion point
+						endFlag = false;
+
+						if (iter == previous) {
+							// Adding at the very start
+							this.start = new Node(value);
+							this.start.setNext(iter);
+							size++;
+						} else if (value <= iter.getValue()) {
+							// Adding at the end
+							Node newNode = new Node(value);
+							iter.setNext(newNode);
+							size++;
+						} else {
+							// Adding at somewhere in middle
+							Node newNode = new Node(value);
+							newNode.setNext(iter);
+							previous.setNext(newNode);
+							size++;
+						}
+					}
+					previous = iter;
+					iter = iter.getNext();
+				} while (endFlag);
 			}
 
-			// check if need to add then shift
-			if (index > 0) {
-				result = shiftArrayAddSys(result, index, giftAmount);
+			// If size is more than capacity, remove the largest(which is at the start of the linkedList)
+			if (size > capacity) {
+				this.start = start.getNext();
+				size--;
 			}
 		}
 
-		return result;
-	}
+		public long getSum() {
+			Node iter = start;
 
-	/*private static void shiftArrayAdd(int[] result, int index, int giftAmount) {
-			for (int i = 0; i < index; i++) {
-				result[i] = result[i + 1];
+			long sum = iter.getValue();
+//			System.out.print(iter.getValue());
+			while (iter.getNext() != null) {
+				iter = iter.getNext();
+				sum += iter.getValue();
+//				System.out.print(" " + iter.getValue());
 			}
-			result[index] = giftAmount;
-		}*/
-	
-	private static int[] shiftArrayAddSys(int[] result, int index, int giftAmount) {
-		int[] newArr = new int[result.length];
+			return sum;
+		}
 
-		System.arraycopy(result, 1, newArr, 0, index - 1);
-		newArr[index - 1] = giftAmount;
-		System.arraycopy(result, index, newArr, index, result.length - index);
+		class Node {
+			private int value;
+			private Node next = null;
 
-		return newArr;
+			Node(int value) {
+				this.value = value;
+			}
+
+			public void setValue(int value) {
+				this.value = value;
+			}
+
+			public int getValue() {
+				return value;
+			}
+
+			public Node getNext() {
+				return next;
+			}
+
+			public void setNext(Node next) {
+				this.next = next;
+			}
+		}
 	}
 }
