@@ -1,24 +1,19 @@
-This Repo includes all the Practice coding problems which I took on various sites. Will try to maintain the source and description as well.
+This Repo includes all the Competitive Coding problem solutions which I took on various sites. Will try to maintain the source and description as well.
 Anyone who can come up with more better algo are free to raise Pull Request will be happy to merge them :)
 
-# Contest
+# <u>Contest</u>
 
-## [TechGig Code Gladiators](https://www.techgig.com/codegladiators/opencontest)
-
-## Code Gladiators 2022
+### Tech Code Gladiators 2023
 1. [World Army vs Aliens](./src/main/java/com/contest/techgig/y2022/codegladiators-2022.md)
 2. [Chantu Bantu](./src/main/java/com/contest/techgig/y2022/codegladiators-2022.md#Chantu-Bantu)
 
-# Website Algo-Solutions
+### Google Codejam 2023
+1. [Colliding Encoding](./src/main/java/com/contest/codejam/y2023/codejam-2023.md)
 
-## [TechGig](https://www.techgig.com)
+### Tech Code Gladiators 2022
+1. [World Army vs Aliens](./src/main/java/com/contest/techgig/y2022/codegladiators-2022.md)
+2. [Chantu Bantu](./src/main/java/com/contest/techgig/y2022/codegladiators-2022.md#Chantu-Bantu)
 
-## Algo Section
-
-1. [Count-Of-One](./src/main/java/com/malay/techgig/algo/Techgig.md#Count-Of-One)
-2. [Presents to Masha](./src/main/java/com/malay/techgig/algo/Techgig.md#Presents-to-Masha)
-3. [First repeating element](./src/main/java/com/malay/techgig/algo/Techgig.md#First-repeating-element)
-4. [Count Bigger](./src/main/java/com/malay/techgig/algo/Techgig.md#Count-Bigger)
-5. [Linear Search](./src/main/java/com/malay/techgig/algo/Techgig.md#Linear-Search)
-6. [Binary Search](./src/main/java/com/malay/techgig/algo/Techgig.md#Binary-Search)
-7. [Occurrence of M](./src/main/java/com/malay/techgig/algo/Techgig.md#Occurrence-of-M)
+### Tech Code Gladiators 2021
+1. [Virus Outbreak](./src/main/java/com/contest/techgig/y2021/Techgig-codegladiators.md#Virus-Outbreak)
+2. [Prime Game](./src/main/java/com/contest/techgig/y2021/Techgig-codegladiators.md#Prime-Game)
