@@ -4,8 +4,8 @@ Anyone who can come up with more better algo are free to raise Pull Request will
 # <u>Contest</u>
 
 ### Tech Code Gladiators 2023
-1. [World Army vs Aliens](./src/main/java/com/contest/techgig/y2022/codegladiators-2022.md)
-2. [Chantu Bantu](./src/main/java/com/contest/techgig/y2022/codegladiators-2022.md#Chantu-Bantu)
+1. OpenRound Problem 1: [Forest Fire](./src/main/java/com/contest/techgig/y2023/codegladiators-2023.md#problem-1-forest-fire)
+2. OpenRound Problem 2: [The Magic Wand](./src/main/java/com/contest/techgig/y2023/codegladiators-2023.md#problem-2-the-magic-wand)
 
 ### Google Codejam 2023
 1. [Colliding Encoding](./src/main/java/com/contest/codejam/y2023/codejam-2023.md)
