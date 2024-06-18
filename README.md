@@ -3,6 +3,10 @@ Anyone who can come up with more better algo are free to raise Pull Request will
 
 # <u>Contest</u>
 
+### Tech Code Gladiators 2024
+1. OpenRound Problem 1: [Long Distance](./src/main/java/com/contest/techgig/y2024/CODEGLADIATORS-2024.md#open-problem-1-long-distance)
+2. OpenRound Problem 2: [Optimizing Competition](./src/main/java/com/contest/techgig/y2024/CODEGLADIATORS-2024.md#open-problem-2-optimizing-competition)
+
 ### Tech Code Gladiators 2023
 1. OpenRound Problem 1: [Forest Fire](./src/main/java/com/contest/techgig/y2023/codegladiators-2023.md#problem-1-forest-fire)
 2. OpenRound Problem 2: [The Magic Wand](./src/main/java/com/contest/techgig/y2023/codegladiators-2023.md#problem-2-the-magic-wand)
